@@ -7,20 +7,91 @@
 @tailwind utilities;
 
 @layer base {
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
     html {
         font-family: "Rubik", sans-serif;
+        background-color: #07080a;
     }
 }
 
 @layer components {
-    .mainLogo {
+    .noticeFont {
         font-family: "Righteous", sans-serif;
     }
 
-    .profileImgContainer {
+    .menuBtn {
+        background-color: transparent;
+        border: 1px white solid;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    
+    .menuIcon, .menuIcon::before , .menuIcon::after {
+        background-color: white;
+        width: 30px;
+        height: 2px;
+        border-radius: 5px;
         position: absolute;
-        left: 0%;
-        top: 50%;
-        transform: translate(-50%, -30%);
+        transition: all 0.5s;
+    }
+    
+    .menuIcon::before, .menuIcon::after {
+        content: "";
+        width: 30px;
+        height: 2px;
+    }
+    
+    .menuIcon::before {
+        transform: translate(-15px, -8px);
+    }
+    
+    .menuIcon::after {
+        transform: translate(-15px, 8px);
+    }
+    
+    .menuBtn:focus {
+        outline: none;
+    }
+    
+    /* to form the X */
+    :is(.active) .menuIcon {
+        background-color: transparent;
+    }
+    
+    /* to form the X */
+    :is(.active) .menuIcon::before {
+        transform: translateX(-15px) rotate(45deg);
+    }
+    
+    /* to form the X */
+    :is(.active) .menuIcon::after {
+        transform: translateX(-15px) rotate(-45deg);
+    }
+
+    .introTextsContainer {
+        animation: revealBlur 1s ease forwards;
+    }
+
+    @keyframes revealBlur {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.5;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 }

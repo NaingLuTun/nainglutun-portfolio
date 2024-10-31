@@ -1,8 +1,9 @@
+import Nav from "../Nav/Nav"
 
 const Header = () => {
   return (
-    <div className="bg-transparent headerContainer">
-        <a href="#intro" className="text-[40px] text-[#ccf281]  mainLogo">Naing</a>
+    <div className="bg-transparent border-b pb-4 headerContainer">
+      <Nav />
 
     </div>
   )
