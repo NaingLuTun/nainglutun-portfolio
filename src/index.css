@@ -27,6 +27,7 @@
     .menuBtn {
         background-color: transparent;
         border: 1px white solid;
+        border-radius: 3px;
         width: 40px;
         height: 40px;
         display: flex;
@@ -78,20 +79,52 @@
     }
 
     .introTextsContainer {
-        animation: revealBlur 1s ease forwards;
+        animation: reveal 2s ease forwards;
     }
 
-    @keyframes revealBlur {
+    @keyframes reveal {
         0% {
             opacity: 0;
-        }
-
-        50% {
-            opacity: 0.5;
         }
 
         100% {
             opacity: 1;
         }
     }
+
+
+    .revealHeaderAnimation {
+        animation: revealFromLeft 1.5s ease forwards;
+    }
+
+    .revealTeckStack {
+        animation: revealFromTopLeft 1.5s ease forwards;
+    }
+
+    @keyframes revealFromLeft {
+        0% {
+            transform: translateX(-40px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translate(0px);
+            opacity: 1;
+        }
+    }
+
+    @keyframes revealFromTopLeft {
+        0% {
+            opacity: 0;
+            transform: translateY(-15px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    /* .reactTechStackContainer {
+        animation: reveal 5s ease forwards;
+    } */
 }
