@@ -1,5 +1,6 @@
+import Certificates from "./components/Main Components/Certificate-section/Certificates"
 import Intro from "./components/Main Components/Intro"
-import TechStack from "./components/Main Components/TechStack/TechStack"
+import TechStack from "./components/Main Components/TechStack-section/TechStack"
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <Intro />
       <TechStack />
+      <Certificates />
     </>
   )
 }

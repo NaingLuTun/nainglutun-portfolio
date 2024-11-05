@@ -10,7 +10,7 @@ import Header from "../Header/Header"
 
 const Intro = () => {
   return (
-    <section id="intro" className=" bg-[#07080a] w-full p-[25px]  introSection">
+    <section id="intro" className=" bg-[#07080a] w-full p-[25px] lg:pr-[50px] lg:pl-[50px]  introSection">
 
           <Header />
 

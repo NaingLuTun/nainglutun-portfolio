@@ -72,8 +72,8 @@ const TechStack = () => {
 
 
     return (
-        <section ref={ref} className="bg-[#07080a] w-full p-[25px] pb-0 relative teckStackSection">
-            <h2 className={`text-white text-nowrap text-3xl text-center mb-[50px] ${inView? "revealHeaderAnimation" : ""} techStackHeader`}>Current Tech Stack</h2>
+        <section ref={ref} className="bg-[#07080a] w-full p-[25px] lg:p-[50px] teckStackSection">
+            <h2 className={`text-white text-nowrap text-3xl text-center font-[500] mb-[50px] ${inView? "revealHeaderAnimation" : ""} techStackHeader`}>Current Tech Stack</h2>
 
             <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 md:gap-3 lg:grid-cols-4 w-full techStacksContainer">
                 <IndividualTechContainer name={techStacks[0].name} image={techStacks[0].image} description={techStacks[0].description} bgColor={techStacks[0].bgColor}/>
