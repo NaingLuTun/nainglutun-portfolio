@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 import mainCertificate from "../../../assets/certificates/Coursera - Meta Front-End Developer.png"
-/* import introToFrontendCertificate from "../../../assets/certificates/Coursera - Introduction to Front-End Development.png"
+import introToFrontendCertificate from "../../../assets/certificates/Coursera - Introduction to Front-End Development.png"
 import programmingWithJSCertificate from "../../../assets/certificates/Coursera - Programming with Javascript.png"
 import versionControlCertificate from "../../../assets/certificates/Coursera - Version Control.png" 
 import htmlAndCssInDepthCertificate from "../../../assets/certificates/Coursera - HTML and CSS in depth.png"
@@ -9,14 +9,68 @@ import reactBasicsCertificate from "../../../assets/certificates/Coursera - Reac
 import advancedReactCertificate from "../../../assets/certificates/Coursera - Advanced React.png"
 import principlesOfUIUXCertificate from "../../../assets/certificates/Coursera - Principles of UI-UX design.png"
 import frontendCapstoneCertificate from "../../../assets/certificates/Coursera - Front-End Developer Capstone.png"
-import codingInterviewPrepCertificate from "../../../assets/certificates/Coursera - Coding Interview Preparation.png" */
+import codingInterviewPrepCertificate from "../../../assets/certificates/Coursera - Coding Interview Preparation.png"
 
 import linkIcon from "../../../assets/link-icon/link-svgrepo-com.svg"
+import SubCertificates from "./SubCertificates"
 
-
+interface subCertificatesType {
+    certiName: string,
+    certiImage: string,
+    verifyLink: string,
+}
 
 const Certificates = () => {
     const [isHovered, setIsHovered] = useState(false)
+
+
+    const subCertificates: subCertificatesType[] = [
+        {
+            certiName: "Introduction to Front-End Development",
+            certiImage: introToFrontendCertificate,
+            verifyLink: "https://coursera.org/verify/JJ3DEW3SGJV3",
+        },
+        {
+            certiName: "Programming with Javascript",
+            certiImage: programmingWithJSCertificate,
+            verifyLink: "https://coursera.org/verify/TM6RGPM7CG6Y",
+        },
+        {
+            certiName: "Version Control",
+            certiImage: versionControlCertificate,
+            verifyLink: "https://coursera.org/verify/R63LVXMKXPD8",
+        },
+        {
+            certiName: "HTML and CSS in depth",
+            certiImage: htmlAndCssInDepthCertificate,
+            verifyLink: "https://coursera.org/verify/478W0OK99UMZ",
+        },
+        {
+            certiName: "React Basics",
+            certiImage: reactBasicsCertificate,
+            verifyLink: "https://coursera.org/verify/JYH3BKTIYLCU",
+        },
+        {
+            certiName: "Advanced React",
+            certiImage: advancedReactCertificate,
+            verifyLink: "https://coursera.org/verify/WHPS9PL8Z4CG",
+        },
+        {
+            certiName: "Principles of UI/UX design",
+            certiImage: principlesOfUIUXCertificate,
+            verifyLink: "https://coursera.org/verify/38SW6DX1CEME",
+        },
+        {
+            certiName: "Front-End Developer Capstone",
+            certiImage: frontendCapstoneCertificate,
+            verifyLink: "https://coursera.org/verify/RUBUX6CE9AC7",
+        },
+        {
+            certiName: "Coding Interview Preparation",
+            certiImage: codingInterviewPrepCertificate,
+            verifyLink: "https://coursera.org/verify/ZKCXS0G14SVJ",
+        },
+    ]
 
     return (
         <section className="bg-[#07080a] w-full p-[25px] lg:p-[50px] certificateSection">
@@ -25,10 +79,10 @@ const Certificates = () => {
                 <p className="text-[#c0c0c0] text-center w-full">The Meta Front-End Developer Professional Certificate course gave me a solid foundation in front-end development and enhanced my ability to create responsive and user-friendly websites.</p>
             </div>
             
-            <div className="flex flex-col w-full bg-[#252525] p-4 rounded-xl certificatesContainer">
+            <div className="flex flex-col w-full bg-[#252525] p-4 rounded-xl gap-4 lg:flex-row certificatesContainer">
 
-                <div className="w-full bg-[#131313] p-4 rounded-xl  mainCertificateContainer">
-                    <div className="overflow-hidden rounded-xl relative mb-3  mainCertiImageContainer">
+                <div className="w-full bg-[#131313] p-4 rounded-xl lg:w-[50%]  mainCertificateContainer">
+                    <div className="overflow-hidden rounded-xl relative mb-3 mainCertiImageContainer">
                         <img src={mainCertificate} alt="Meta Front-end Development Professional Certificate" className={`rounded-xl transition-[0.5s] relative ${isHovered? "scale-125 blur-sm" : ""} mainCertiImage`} />{/* hover animation in index.css */}
                         <a href="https://coursera.org/verify/professional-cert/OXXVOG0AJZNL" target="_blank">
                             <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-full top-0 left-0 absolute bg-[#000000b0] flex flex-col justify-center items-center opacity-0 transition-[0.3s] gap-2 hover:opacity-100 imageHoverVerifyContainer">
@@ -73,9 +127,8 @@ const Certificates = () => {
                     
                 </div>
 
-                <div className=" subCertificatesContainer">
+                <SubCertificates subCertificates={subCertificates}/>
 
-                </div>
             </div>
 
         </section>

@@ -124,4 +124,17 @@
         }
     }
 
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(71, 71, 71);
+        border-radius: 5px;
+    }
+
 }
