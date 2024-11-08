@@ -15,12 +15,12 @@ const IndividualTechContainer = ({name, image, description, bgColor}: individual
 
 
   return (
-        <div ref={ref} className={`p-[10px] mb-3 rounded-xl flex gap-4 w-full bg-[#252525] hover:bg-[#2b2b2b] hover:shadow-inwards ${inView? "revealTeckStack" : ""} md:mb-0 individualTechStackContainer`}>
-            <div style={{backgroundColor: bgColor}} className="w-[80px] h-[80px] p-3 flex justify-center items-center rounded-xl techIconContainer">
+        <div ref={ref} className={`p-[10px] mb-3 rounded-xl flex gap-4 w-full bg-[#252525] hover:bg-[#2b2b2b] hover:shadow-inwards ${inView? "revealTeckStack" : ""} md:mb-0 lg:h-fit individualTechStackContainer`}>
+            <div style={{backgroundColor: bgColor}} className="w-[80px] h-[80px] p-3 flex justify-center items-center rounded-xl lg:w-[100px] lg:h-fit techIconContainer">
                 <img draggable={false} src={image} alt="react" className="w-full"/>
             </div>
 
-            <div className="p-3 flex flex-col justify-center lg:block lg:p-0 h-[80px] lg:w-[200px]  techInfoContainer">
+            <div className="p-3 flex flex-col justify-center lg:block lg:p-0 h-[80px] lg:w-[70%]  techInfoContainer">
                 <h3 className="text-white text-xl font-[500]">{name}</h3>
                 <p className="text-[#c0c0c0]">{description}</p>
             </div>
