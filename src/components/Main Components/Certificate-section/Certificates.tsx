@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useMemo, useState } from "react"
 
 import mainCertificate from "../../../assets/certificates/Coursera - Meta Front-End Developer.png"
 
@@ -7,12 +7,67 @@ import linkIcon2 from "../../../assets/link-icon/link-icon-2.svg"
 import metaIcon from "../../../assets/meta-svgrepo-com.svg"
 
 
+interface moduleCertiType {
+    courseNo: number,
+    courseName: string,
+    certiLink: string,
+}
+
 
 
 const Certificates = () => {
     const [isHovered, setIsHovered] = useState(false)
 
+    const skills = useMemo(() => ["Front-End Development", "React", "Javascript", "HTML", "CSS", "Version Control", "Functional Programming", "Object Oriented Programming", "Unit Testing", "Web Performance", "Responsive Design", "Principles of UX/UI"], [])
 
+    const moduleCerti = useMemo<moduleCertiType[]>(() => 
+        [
+        {
+            courseNo: 1,
+            courseName: "Introduction to Front-End Development",
+            certiLink: "https://coursera.org/verify/JJ3DEW3SGJV3",
+        },
+        {
+            courseNo: 2,
+            courseName: "Programming with Javascript",
+            certiLink: "https://coursera.org/verify/TM6RGPM7CG6Y",
+        },
+        {
+            courseNo: 3,
+            courseName: "Version Control",
+            certiLink: "https://coursera.org/verify/R63LVXMKXPD8",
+        },
+        {
+            courseNo: 4,
+            courseName: "HTML and CSS in depth",
+            certiLink: "https://coursera.org/verify/478W0OK99UMZ",
+        },
+        {
+            courseNo: 5,
+            courseName: "React Basics",
+            certiLink: "https://coursera.org/verify/JYH3BKTIYLCU",
+        },
+        {
+            courseNo: 6,
+            courseName: "Advanced React",
+            certiLink: "https://coursera.org/verify/WHPS9PL8Z4CG",
+        },
+        {
+            courseNo: 7,
+            courseName: "Principles of UX/UI design",
+            certiLink: "https://coursera.org/verify/38SW6DX1CEME",
+        },
+        {
+            courseNo: 8,
+            courseName: "Front-End Developer Capstone",
+            certiLink: "https://coursera.org/verify/RUBUX6CE9AC7",
+        },
+        {
+            courseNo: 9,
+            courseName: "Coding Interview Preparation",
+            certiLink: "https://coursera.org/verify/ZKCXS0G14SVJ",
+        },
+    ],[]) 
     return (
         <section className="bg-[#07080a] w-full p-[25px] lg:p-[50px] certificateSection">
             <div className="mb-[25px] md:mb-[50px] certificateHeaderContainer">
@@ -45,7 +100,10 @@ const Certificates = () => {
                             <p className="text-white text-nowrap text-lg text-center mb-4 lg:text-xl skillsHeader">Skills Aquired</p>
                         
                             <div className="flex flex-wrap gap-2 p-[10px] pt-0 pb-0 w-full mb-6 skillsContainer ">
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Front-End Development</p>
+                                {skills.map(skill => (
+                                    <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">{skill}</p>
+                                ))}
+                                {/* <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Front-End Development</p>
                                 <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">React</p>
                                 <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Javascript</p>
                                 <p className="text-white text-[14px] p-2 pr-4 pl-4  h-fit rounded-full bg-[#252525] skills">HTML</p>
@@ -56,7 +114,7 @@ const Certificates = () => {
                                 <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Unit Testing</p>
                                 <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Web Performance</p>
                                 <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Responsive Design</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Principles of UI/UX</p>
+                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Principles of UI/UX</p> */}
 
                                 
                             </div>
@@ -84,7 +142,14 @@ const Certificates = () => {
                         <h2 className="text-white text-xl mb-6 text-center">Course Completed Module Certificates</h2>
 
                         <div className="lg:grid lg:grid-cols-2 moduleCertificatesContainer">
-                            <div className="flex w-full gap-1 mb-4 course1Container">
+                            {moduleCerti.map(certi => (
+                                <div key={certi.courseName} className="flex w-full gap-1 mb-4 course1Container">
+                                    <p className="text-white text-[14px] text-nowrap lg:text-lg">Course {certi.courseNo} - </p>
+                                    <a href={certi.certiLink} target="_blank" className="text-white text-[14px] underline lg:text-lg">{certi.courseName} <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
+                                </div>
+                            ))}
+
+                           {/*  <div className="flex w-full gap-1 mb-4 course1Container">
                                 <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 1 - </p>
                                 <a href="https://coursera.org/verify/JJ3DEW3SGJV3" target="_blank" className="text-white text-[14px] underline lg:text-lg">Introduction to Front-End Development <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
                             </div>
@@ -119,7 +184,7 @@ const Certificates = () => {
                             <div className="flex w-full gap-1 mb-4 course1Container">
                                 <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 9 - </p>
                                 <a href="https://coursera.org/verify/ZKCXS0G14SVJ" target="_blank" className="text-white text-[14px] underline lg:text-lg">Coding Interview Preparation <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
-                            </div>
+                            </div> */}
                         </div>
 
                         
