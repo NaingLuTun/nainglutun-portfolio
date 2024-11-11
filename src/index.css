@@ -101,6 +101,16 @@
         animation: revealFromTopLeft 1.5s ease forwards;
     }
 
+    .individualProjectsContainer {
+        transform: translateX(-30px) translateY(-30px);
+        opacity: 0;
+    }
+    
+    .revealProject {
+        transform: translateX(0px) translateY(0px);
+        opacity: 1;
+    }
+
     @keyframes revealFromLeft {
         0% {
             transform: translateX(-40px);

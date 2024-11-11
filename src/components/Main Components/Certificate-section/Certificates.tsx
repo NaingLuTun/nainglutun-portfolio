@@ -86,7 +86,7 @@ const Certificates = () => {
                         <div className="overflow-hidden rounded-xl relative mb-3 lg:w-[50%] mainCertiImageContainer">
                             <img src={mainCertificate} alt="Meta Front-end Development Professional Certificate" className={`rounded-xl transition-[0.5s] relative ${isHovered? "scale-125 blur-sm" : ""} mainCertiImage`} />{/* hover animation in index.css */}
                             <a href="https://coursera.org/verify/professional-cert/OXXVOG0AJZNL" target="_blank">
-                                <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-full top-0 left-0 absolute bg-[#000000b0] flex flex-col justify-center items-center opacity-0 transition-[0.3s] gap-2 hover:opacity-100 imageHoverVerifyContainer">
+                                <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-full h-full top-0 left-0 absolute bg-[#000000b0] rounded-xl flex flex-col justify-center items-center opacity-0 transition-[0.3s] gap-2 hover:opacity-100 imageHoverVerifyContainer">
                                     
                                     <img src={linkIcon} alt="link" className="w-[50px] lg:w-[80px]" />
                                     

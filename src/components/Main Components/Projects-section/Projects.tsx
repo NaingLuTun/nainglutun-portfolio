@@ -12,7 +12,8 @@ import tailwindCSSIcon from "../../../assets/tech-stack-icons/tailwind-svgrepo-c
 import linkIcon3 from "../../../assets/link-icon/link-icon-3.svg"
 import githubIcon from "../../../assets/github-142-svgrepo-com.svg"
 
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
+import { useInView } from "react-intersection-observer"
 
 interface techStackType {
     techIcon: string,
@@ -26,9 +27,17 @@ interface ProjectsType {
     projectDescription: string,
     projectLink: string,
     githubLink: string,
+    transition: number,
 }
 
 const Projects = () => {
+
+    const [hoveredProject, setHoveredProject] = useState<string | null>(null)
+
+    const {ref, inView} = useInView({
+        triggerOnce: true, 
+        threshold: 0.01,
+    })
 
     const projects = useMemo<ProjectsType[]>(() => 
     [
@@ -54,6 +63,7 @@ const Projects = () => {
             projectDescription: "A responsive and interactive hot pot restaurant website for hot pot lovers",
             projectLink: "https://nainglutun.github.io/boiling-point",
             githubLink: "https://github.com/NaingLuTun/boiling-point",
+            transition: 0.5,
         },
         {
             projectImage: geraStoreImage,
@@ -77,6 +87,7 @@ const Projects = () => {
             projectDescription: "A complete online e-commerce clothing store website for stylish people",
             projectLink: "https://nainglutun.github.io/gera-store",
             githubLink: "https://github.com/NaingLuTun/gera-store",
+            transition: 1,
         },
         {
             projectImage: flowyImage,
@@ -97,9 +108,10 @@ const Projects = () => {
                 },
             ],
             /* projectDescription: "Flowy is a web application that provide you accurate and up-to-date weather forecasts, powered by openweathermap API. I decided to create this fun little project to show my ability working with APIs.", */
-            projectDescription: "A weather forecast web application, developed with openweathermap API",
+            projectDescription: "A fully functional weather forecast web application, powered by openweathermap API",
             projectLink: "https://nainglutun.github.io/flowy",
             githubLink: "https://github.com/NaingLuTun/flowy",
+            transition: 1.5,
         },
         {
             projectImage: devLabImage,
@@ -123,6 +135,7 @@ const Projects = () => {
             projectDescription: "An attractive, responsive and interactive landing page for an educationl website",
             projectLink: "https://nainglutun.github.io/DevLab",
             githubLink: "https://github.com/NaingLuTun/DevLab",
+            transition: 2,
         },
     ],[])
 
@@ -135,13 +148,18 @@ const Projects = () => {
                 <p className="text-[#c0c0c0] w-full">These are my personal projects that I made while learning and advancing my frontend development skills</p>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 projectsContainer">
-                {projects.map(project => (
-                    <div key={project.projectTitle} className="bg-[#252525] p-4 rounded-xl individualProjectsContainer">
+            <div ref={ref} className="grid grid-cols-1 gap-4 lg:grid-cols-2 projectsContainer">
+                {projects.map((project) => (
+                    <div style={{transition: `${project.transition}s`}} key={project.projectTitle} className={`bg-[#252525] p-4 rounded-xl ${inView? "revealProject" : ""} individualProjectsContainer`}>
 
                         
-                            <div className="w-full rounded-xl mb-4 projectImageContainer">
-                                <img src={project.projectImage} alt={project.projectImage} className="w-full rounded-xl" />
+                            <div className="w-full rounded-xl mb-4 relative overflow-hidden projectImageContainer">
+                                <img src={project.projectImage} alt={project.projectImage} className={`w-full rounded-xl transition-[0.5s] ${hoveredProject === project.projectTitle? "scale-125 blur-sm": ""} projectImage`} />
+                                <a href={project.projectLink} target="_blank">
+                                    <div onMouseEnter={() => setHoveredProject(project.projectTitle)} onMouseLeave={() => setHoveredProject(null)} className="w-full h-full top-0 left-0 absolute bg-[#000000b0] rounded-xl flex flex-col justify-center items-center opacity-0 transition-[0.3s] gap-2 hover:opacity-100 imageHoverVerifyContainer">
+                                        <img src={linkIcon3} alt="link" className="w-[50px] lg:w-[80px]" />
+                                    </div>
+                                </a>
                             </div>
 
                             <div className="w-full mb-4 projectInfoContainer">
