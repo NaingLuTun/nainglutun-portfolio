@@ -70,9 +70,9 @@ const Certificates = () => {
     ],[]) 
     return (
         <section className="bg-[#07080a] w-full p-[25px] lg:p-[50px] certificateSection">
-            <div className="mb-[25px] md:mb-[50px] certificateHeaderContainer">
-                <h2 className="text-white text-nowrap text-3xl text-center font-[500] mb-3 ">Certificates</h2>
-                <p className="text-[#c0c0c0] text-center w-full">The Meta Front-End Developer Professional Certificate course gave me a solid foundation in front-end development and enhanced my ability to create responsive and user-friendly websites.</p>
+            <div className="mb-[25px] md:mb-[50px] text-center certificateHeaderContainer">
+                <h2 className="text-white text-nowrap text-3xl font-[500] mb-3 ">Certificates</h2>
+                <p className="text-[#c0c0c0] w-full">The Meta Front-End Developer Professional Certificate course gave me a solid foundation in front-end development and enhanced my ability to create responsive and user-friendly websites.</p>
             </div>
             
             <div className="w-full h-full bg-[#252525] p-4 rounded-xl gap-4 certificateContainer">
@@ -100,25 +100,12 @@ const Certificates = () => {
                             <p className="text-white text-nowrap text-lg text-center mb-4 lg:text-xl skillsHeader">Skills Aquired</p>
                         
                             <div className="flex flex-wrap gap-2 p-[10px] pt-0 pb-0 w-full mb-6 skillsContainer ">
-                                {skills.map(skill => (
-                                    <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">{skill}</p>
+                                {skills.map((skill) => (
+                                    <p key={skill} className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">{skill}</p>
                                 ))}
-                                {/* <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Front-End Development</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">React</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Javascript</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4  h-fit rounded-full bg-[#252525] skills">HTML</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4  h-fit rounded-full bg-[#252525] skills">CSS</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Version Control</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Functional Programming</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Object Oriented Programming</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Unit Testing</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Web Performance</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Responsive Design</p>
-                                <p className="text-white text-[14px] p-2 pr-4 pl-4 h-fit rounded-full bg-[#252525] skills">Principles of UI/UX</p> */}
-
                                 
                             </div>
-                                <div className="w-full p-[14px] bg-[#252525] rounded-xl mainCertiInfoContainer">
+                                <div className="w-full flex flex-col gap-3 p-[14px] bg-[#252525] rounded-xl mainCertiInfoContainer">
                                     <div className="flex items-center gap-1 mb-2 organizationContainer">
                                         <p className="text-white lg:text-lg organization">Organization - </p>
                                         <div className="p-1 flex justify-center items-center bg-white metaIconContainer">
@@ -148,43 +135,6 @@ const Certificates = () => {
                                     <a href={certi.certiLink} target="_blank" className="text-white text-[14px] underline lg:text-lg">{certi.courseName} <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
                                 </div>
                             ))}
-
-                           {/*  <div className="flex w-full gap-1 mb-4 course1Container">
-                                <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 1 - </p>
-                                <a href="https://coursera.org/verify/JJ3DEW3SGJV3" target="_blank" className="text-white text-[14px] underline lg:text-lg">Introduction to Front-End Development <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
-                            </div>
-                            <div className="flex w-full gap-1 mb-4 course1Container">
-                                <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 2 - </p>
-                                <a href="https://coursera.org/verify/TM6RGPM7CG6Y" target="_blank" className="text-white text-[14px] underline lg:text-lg">Programming with Javascript <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
-                            </div>
-                            <div className="flex w-full gap-1 mb-4 course1Container">
-                                <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 3 - </p>
-                                <a href="https://coursera.org/verify/R63LVXMKXPD8" target="_blank" className="text-white text-[14px] underline lg:text-lg">Version Control <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
-                            </div>
-                            <div className="flex w-full gap-1 mb-4 course1Container">
-                                <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 4 - </p>
-                                <a href="https://coursera.org/verify/478W0OK99UMZ" target="_blank" className="text-white text-[14px] underline lg:text-lg">HTMl and CSS in depth <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
-                            </div>
-                            <div className="flex w-full gap-1 mb-4 course1Container">
-                                <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 5 - </p>
-                                <a href="https://coursera.org/verify/JYH3BKTIYLCU" target="_blank" className="text-white text-[14px] underline lg:text-lg">React Basics <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
-                            </div>
-                            <div className="flex w-full gap-1 mb-4 course1Container">
-                                <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 6 - </p>
-                                <a href="https://coursera.org/verify/WHPS9PL8Z4CG" target="_blank" className="text-white text-[14px] underline lg:text-lg">Advanced React <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
-                            </div>
-                            <div className="flex w-full gap-1 mb-4 course1Container">
-                                <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 7 - </p>
-                                <a href="https://coursera.org/verify/38SW6DX1CEME" target="_blank" className="text-white text-[14px] underline lg:text-lg">Principles of UX/UI Design <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
-                            </div>
-                            <div className="flex w-full gap-1 mb-4 course1Container">
-                                <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 8 - </p>
-                                <a href="https://coursera.org/verify/RUBUX6CE9AC7" target="_blank" className="text-white text-[14px] underline lg:text-lg">Front-End Developer Capstone <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
-                            </div>
-                            <div className="flex w-full gap-1 mb-4 course1Container">
-                                <p className="text-white text-[14px] text-nowrap lg:text-lg">Course 9 - </p>
-                                <a href="https://coursera.org/verify/ZKCXS0G14SVJ" target="_blank" className="text-white text-[14px] underline lg:text-lg">Coding Interview Preparation <img src={linkIcon2} alt="link" className="w-[16px] inline"/></a>
-                            </div> */}
                         </div>
 
                         
