@@ -10,7 +10,7 @@ import cssIcon from "../../../assets/tech-stack-icons/css-svgrepo-com.svg"
 import tailwindCSSIcon from "../../../assets/tech-stack-icons/tailwind-svgrepo-com.svg"
 
 import linkIcon3 from "../../../assets/link-icon/link-icon-3.svg"
-import githubIcon from "../../../assets/github-142-svgrepo-com.svg"
+import githubIcon from "../../../assets/icons8-github.svg"
 
 import { useMemo, useState } from "react"
 import { useInView } from "react-intersection-observer"
@@ -180,7 +180,7 @@ const Projects = () => {
                                 </a>
                                 <a href={project.githubLink} target="_blank" className="text-white leading-[16px] flex gap-1 items-center">
                                     <span className="underline">Visit Repo</span>
-                                    <img src={githubIcon} alt="live" className="w-[18px] rounded-full inline" />
+                                    <img src={githubIcon} alt="live" className="w-[25px] rounded-full inline" />
                                 </a>
                             </div>
                     </div>

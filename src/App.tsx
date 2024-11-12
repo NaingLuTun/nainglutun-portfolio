@@ -2,6 +2,7 @@ import Certificates from "./components/Main Components/Certificate-section/Certi
 import Intro from "./components/Main Components/Intro"
 import Projects from "./components/Main Components/Projects-section/Projects"
 import TechStack from "./components/Main Components/TechStack-section/TechStack"
+import About from "./components/About"
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <Intro />
       <TechStack />
+      <About />
       <Certificates />
       <Projects />
     </>

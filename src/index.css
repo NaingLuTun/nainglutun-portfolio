@@ -20,6 +20,31 @@
 }
 
 @layer components {
+
+    .introSection {
+        --s: 100px;
+        --c1: #1d1d1d;
+        --c2: #0f0f0f;
+        
+        --_g: 
+           var(--c2) 6%  14%,var(--c1) 16% 24%,var(--c2) 26% 34%,var(--c1) 36% 44%,
+           var(--c2) 46% 54%,var(--c1) 56% 64%,var(--c2) 66% 74%,var(--c1) 76% 84%,var(--c2) 86% 94%;
+        background:
+          radial-gradient(100% 100% at 100% 0,var(--c1) 4%,var(--_g),#0008 96%,#0000),
+          radial-gradient(100% 100% at 0 100%,#0000, #0008 4%,var(--_g),var(--c1) 96%)
+          var(--c1);
+        background-size: var(--s) var(--s);
+    }
+
+    .aboutContainer {
+        --s: 150px;
+  
+        background:
+          linear-gradient(135deg,#0000 18.75%,rgba(29, 29, 29) 0 31.25%,#0000 0),
+          repeating-linear-gradient(45deg,rgba(29, 29, 29) -6.25% 6.25%,rgba(15, 15, 15, 0.7) 0 18.75%);
+        background-size: var(--s) var(--s); 
+    }
+
     .noticeFont {
         font-family: "Righteous", sans-serif;
     }
@@ -132,6 +157,25 @@
             opacity: 1;
             transform: translateY(0px);
         }
+    }
+
+
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg); /* Fixed typo here */
+        }
+    }
+    
+    .triangleIcon {
+        animation: rotate 4s linear infinite;
+    }
+    
+    .squareIcon {
+        animation: rotate 4s linear infinite;
     }
 
     ::-webkit-scrollbar {

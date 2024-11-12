@@ -9,7 +9,7 @@ const Nav = () => {
   return (
 
     <div className="w-full flex items-center justify-between navBar">
-        <a href="#intro" className="text-[30px] text-[#6664f1] noticeFont">Naing</a>
+        <a href="#intro" className="text-[30px] text-[#403df8] noticeFont">Naing</a>
 
         <button onClick={handleViewNav} className={`menuBtn ${viewNav? "active" : ""}`}>
             <div className=" menuIcon"></div>
