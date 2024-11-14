@@ -5,7 +5,7 @@ import triangleIcon from "../assets/about-section-icons/triangle-svgrepo-com.svg
 import squareIcon from "../assets/about-section-icons/square-svgrepo-com.svg"
 
 import githubIcon from "../assets/icons8-github.svg"
-import linkedinIcon from "../assets/icons8-linkedin.svg"
+import linkedinIcon from "../assets/linkedin-svgrepo-com.svg"
 
 import downloadIcon from "../assets/download-minimalistic-svgrepo-com.svg"
 
@@ -15,13 +15,13 @@ import { useMediaQuery } from "react-responsive"
 const About = () => {
 
     const isBigScreen = useMediaQuery({ query: '(min-width: 1024px)' })
-    const isLargerScreen = useMediaQuery({ query: '(min-width: 1100px)' })
+    const isLargerScreen = useMediaQuery({ query: '(min-width: 1240px)' })
 
     return (
         <section className="bg-[#07080a] w-full p-[25px] lg:p-[50px] aboutSection">
 
             
-            <div className="bg-[#252525] w-full  rounded-md flex flex-col gap-4 relative lg:flex-row  aboutContainer">
+            <div className="bg-[#252525] w-full  rounded-md flex flex-col gap-4 relative lg:flex-row  aboutContainer backgroundPattern2">
                 {isLargerScreen && (
                     <>
                     <img src={triangleIcon} alt="" className="absolute w-[70px] bottom-[15%] left-[45%] opacity-30 triangleIcon"/>

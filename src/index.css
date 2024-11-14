@@ -21,7 +21,7 @@
 
 @layer components {
 
-    .introSection {
+    .backgroundPattern1 {
         --s: 100px;
         --c1: #1d1d1d;
         --c2: #0f0f0f;
@@ -36,7 +36,7 @@
         background-size: var(--s) var(--s);
     }
 
-    .aboutContainer {
+    .backgroundPattern2 {
         --s: 150px;
   
         background:
@@ -169,6 +169,42 @@
             transform: rotate(360deg); /* Fixed typo here */
         }
     }
+
+    @keyframes moveLeftAndRight {
+        0% {
+            transform: rotate(140deg) translateY(0);
+          }
+          50% {
+            transform: rotate(140deg) translateY(35px);
+          }
+          100% {
+            transform: rotate(140deg) translateY(0);
+          }
+    }
+    @keyframes moveRightAndLeft {
+        0% {
+            transform: scaleX(-1) rotate(140deg) translateY(0);
+          }
+          50% {
+            transform: scaleX(-1) rotate(140deg) translateY(-35px);
+          }
+          100% {
+            transform: scaleX(-1) rotate(140deg) translateY(0);
+          }
+    }
+
+    .arrowPointer1 {
+        
+        animation: moveLeftAndRight 4s linear infinite;
+
+    }
+    .arrowPointer2 {
+        
+        animation: moveRightAndLeft 4s linear infinite;
+
+    }
+
+
     
     .triangleIcon {
         animation: rotate 4s linear infinite;
