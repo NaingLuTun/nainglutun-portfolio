@@ -69,7 +69,7 @@ const Certificates = () => {
         },
     ],[]) 
     return (
-        <section className="bg-[#07080a] w-full p-[25px] lg:p-[50px] certificateSection">
+        <section id="certificates" className="bg-[#07080a] w-full p-[25px] lg:p-[50px] certificateSection">
             <div className="mb-[25px] md:mb-[50px] text-center certificateHeaderContainer">
                 <h2 className="text-white text-nowrap text-3xl font-[500] mb-3 ">Certificates</h2>
                 <p className="text-[#c0c0c0] w-full">The Meta Front-End Developer Professional Certificate course gave me a solid foundation in front-end development and enhanced my ability to create responsive and user-friendly websites.</p>

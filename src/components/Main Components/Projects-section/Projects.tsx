@@ -140,7 +140,7 @@ const Projects = () => {
     ],[])
 
     return (
-        <section className="bg-[#07080a] w-full p-[25px] lg:p-[50px] projectsSection">
+        <section id="projects" className="bg-[#07080a] w-full p-[25px] lg:p-[50px] projectsSection">
             <div className="mb-[25px] md:mb-[50px] text-center projectsHeaderContainer">
                 <h2 className="text-white text-nowrap text-3xl font-[500] mb-3 ">
                     My Personal Projects

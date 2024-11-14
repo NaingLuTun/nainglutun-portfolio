@@ -18,10 +18,10 @@ const About = () => {
     const isLargerScreen = useMediaQuery({ query: '(min-width: 1240px)' })
 
     return (
-        <section className="bg-[#07080a] w-full p-[25px] lg:p-[50px] aboutSection">
+        <section id="about" className="bg-[#07080a] w-full p-[25px] lg:p-[50px] aboutSection">
 
             
-            <div className="bg-[#252525] w-full  rounded-md flex flex-col gap-4 relative lg:flex-row  aboutContainer backgroundPattern2">
+            <div className="bg-[#252525] w-full  rounded-xl flex flex-col gap-4 relative lg:flex-row  aboutContainer backgroundPattern2">
                 {isLargerScreen && (
                     <>
                     <img src={triangleIcon} alt="" className="absolute w-[70px] bottom-[15%] left-[45%] opacity-30 triangleIcon"/>
@@ -32,10 +32,10 @@ const About = () => {
                     </>
                 )}
                 
-                <div className="w-full lg:w-[40%] rounded-md imageContainer">
+                <div className="w-full lg:w-[40%] rounded-xl imageContainer">
                     {isBigScreen ? 
-                    <img src={aboutImage} alt="image" className="w-full rounded-md" /> : 
-                    <img src={aboutMoblieImage} alt="image" className="w-full rounded-md"/>
+                    <img src={aboutImage} alt="image" className="w-full rounded-l-xl" /> : 
+                    <img src={aboutMoblieImage} alt="image" className="w-full rounded-t-xl"/>
                     }
                     
                 </div>

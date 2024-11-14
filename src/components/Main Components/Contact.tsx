@@ -27,7 +27,7 @@ const Contact = () => {
     }
 
     return (
-        <section className="bg-[#252525] w-full p-[25px] lg:p-[50px] contactSection">
+        <section id="contact" className="bg-[#252525] w-full p-[25px] lg:p-[50px] contactSection">
             <h2 ref={ref} className={`text-[50px] text-[#403df8] font-[500] text-center opacity-0 mb-[50px] ${inView? "revealHeaderAnimation" : ""} lg:text-[80px] `}> Get In Touch</h2>
 
             <div className="flex flex-col gap-[40px] relative md:flex-row md:justify-evenly md:items-center  contactInfosContainer">
