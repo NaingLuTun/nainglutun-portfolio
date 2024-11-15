@@ -2,7 +2,7 @@ import Certificates from "./components/Main Components/Certificate-section/Certi
 import Intro from "./components/Main Components/Intro"
 import Projects from "./components/Main Components/Projects-section/Projects"
 import TechStack from "./components/Main Components/TechStack-section/TechStack"
-import About from "./components/About"
+import About from "./components/Main Components/About"
 import Contact from "./components/Main Components/Contact"
 import Footer from "./components/Footer/Footer"
 
