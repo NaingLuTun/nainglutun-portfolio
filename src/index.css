@@ -174,35 +174,41 @@
     @keyframes moveLeftAndRight {
         0% {
             transform: rotate(140deg) translateY(0);
+            transform-origin: center;
           }
           50% {
             transform: rotate(140deg) translateY(35px);
+            transform-origin: center;
           }
           100% {
             transform: rotate(140deg) translateY(0);
+            transform-origin: center;
           }
     }
     @keyframes moveRightAndLeft {
         0% {
             transform: scaleX(-1) rotate(140deg) translateY(0);
+            transform-origin: center;
           }
           50% {
             transform: scaleX(-1) rotate(140deg) translateY(-35px);
+            transform-origin: center;
           }
           100% {
             transform: scaleX(-1) rotate(140deg) translateY(0);
+            transform-origin: center;
           }
     }
 
     .arrowPointer1 {
         
         animation: moveLeftAndRight 4s linear infinite;
-
+        transform-origin: center;
     }
     .arrowPointer2 {
         
         animation: moveRightAndLeft 4s linear infinite;
-
+        transform-origin: center;
     }
 
 
