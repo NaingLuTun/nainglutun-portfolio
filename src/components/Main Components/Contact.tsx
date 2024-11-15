@@ -6,6 +6,8 @@ import copyIcon from "../../assets/contact-section-icons/copy-svgrepo-com.svg"
 import checkIcon from "../../assets/contact-section-icons/check-svgrepo-com.svg"
 import arrowPointer from "../../assets/contact-section-icons/arrow-svgrepo-com.svg"
 
+import { useMediaQuery } from "react-responsive"
+
 import { useState } from "react"
 
 
@@ -14,6 +16,8 @@ const Contact = () => {
         triggerOnce: true, 
         threshold: 0.01,
     })
+
+    const isLargerScreen = useMediaQuery({ query: '(min-width: 1240px)' })
 
 
     const [email] = useState("nainglu7924@gmail.com")
@@ -31,9 +35,13 @@ const Contact = () => {
             <h2 ref={ref} className={`text-[50px] text-[#403df8] font-[500] text-center opacity-0 mb-[50px] ${inView? "revealHeaderAnimation" : ""} lg:text-[80px] `}> Get In Touch</h2>
 
             <div className="flex flex-col gap-[40px] relative md:flex-row md:justify-evenly md:items-center  contactInfosContainer">
-
-                <img src={arrowPointer} alt="arrow" className={`absolute w-[40px] top-[26%] left-[18%] md:w-[40px] md:top-[50%] md:left-[8%] lg:w-[60px] lg:top-[35%] lg:left-[12%]  arrowPointer1 `} />
-                <img src={arrowPointer} alt="arrow" className={`absolute w-[40px] top-[70%] left-[92%] md:w-[40px] md:top-[30%] md:left-[92%] lg:w-[60px] lg:top-[15%] lg:left-[88%] arrowPointer2 `}/>
+                {isLargerScreen && (
+                    <>
+                        <img src={arrowPointer} alt="arrow" className={`absolute lg:w-[60px] top-[35%] left-[12%]  arrowPointer1 `} />
+                        <img src={arrowPointer} alt="arrow" className={`absolute lg:w-[60px] top-[15%] left-[88%] arrowPointer2 `}/>
+                    </>
+                )}
+                
 
                 <div className="w-full flex flex-col items-center gap-4 lg:w-[300px] linkedinContainer">
                     <img src={linkedinIcon} alt="linkedin" className="w-[100px] p-[6px]" />
