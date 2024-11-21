@@ -18,7 +18,7 @@ const Intro = () => {
 
             <div className="pt-3 pb-3 w-full flex items-center justify-center gap-3 ProjectAndCVBtnContainer">
                 <a href="#projects" className="text-white text-nowrap bg-[#403df8] p-2 rounded-lg border-[#7e7cec] border-2 hover:bg-[#4947aa] projectsLinkBtn">See my projects {">"} </a>
-                <a href={cvFile} download="NaingLuTunCV" className="p-2 text-white text-nowrap flex gap-1 items-center"> <img className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]" src={downloadIcon} alt="download" /> add to download</a>
+                <a href={cvFile} download="NaingLuTunCV" className="p-2 text-white text-nowrap flex gap-1 items-center"> <img className="w-[30px] h-[30px] md:w-[40px] md:h-[40px]" src={downloadIcon} alt="download" />Download CV</a>
             </div>
           </div>
           
