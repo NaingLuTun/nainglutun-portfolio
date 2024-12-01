@@ -64,7 +64,7 @@ const Projects = () => {
             projectDescription: "A custom YouTube video queue player.",
             projectLink: "https://nainglutun.github.io/ClipX",
             githubLink: "https://github.com/NaingLuTun/ClipX",
-            transition: 2,
+            transition: 0.5,
         },
         {
             projectImage: boilingPointImage,
@@ -88,7 +88,7 @@ const Projects = () => {
             projectDescription: "A responsive and interactive hot pot restaurant website for hot pot lovers",
             projectLink: "https://nainglutun.github.io/boiling-point",
             githubLink: "https://github.com/NaingLuTun/boiling-point",
-            transition: 0.5,
+            transition: 1,
         },
         {
             projectImage: geraStoreImage,
@@ -112,7 +112,7 @@ const Projects = () => {
             projectDescription: "A complete online e-commerce clothing store website for stylish people",
             projectLink: "https://nainglutun.github.io/gera-store",
             githubLink: "https://github.com/NaingLuTun/gera-store",
-            transition: 1,
+            transition: 1.5,
         },
         {
             projectImage: flowyImage,
@@ -136,7 +136,7 @@ const Projects = () => {
             projectDescription: "A fully functional weather forecast web application, powered by openweathermap API",
             projectLink: "https://nainglutun.github.io/flowy",
             githubLink: "https://github.com/NaingLuTun/flowy",
-            transition: 1.5,
+            transition: 2,
         },
         {
             projectImage: devLabImage,
@@ -160,7 +160,7 @@ const Projects = () => {
             projectDescription: "An attractive, responsive and interactive landing page for an educationl website",
             projectLink: "https://nainglutun.github.io/DevLab",
             githubLink: "https://github.com/NaingLuTun/DevLab",
-            transition: 2,
+            transition: 2.5,
         },
         
     ],[])
