@@ -2,12 +2,14 @@ import boilingPointImage from "../../../assets/projects-images/boiling-point-ima
 import geraStoreImage from "../../../assets/projects-images/gera-store-image.png"
 import flowyImage from "../../../assets/projects-images/flowy-image.png"
 import devLabImage from "../../../assets/projects-images/devlab-image.png"
+import clipXImage from "../../../assets/projects-images/ClipX-image.png"
 
 import javascriptIcon from "../../../assets/tech-stack-icons/javascript-svgrepo-com.svg"
 import typescriptIcon from "../../../assets/tech-stack-icons/typescript-icon-svgrepo-com.svg"
 import reactIcon from "../../../assets/tech-stack-icons/react-svgrepo-com.svg"
 import cssIcon from "../../../assets/tech-stack-icons/css-svgrepo-com.svg"
 import tailwindCSSIcon from "../../../assets/tech-stack-icons/tailwind-svgrepo-com.svg"
+import scssIcon from "../../../assets/tech-stack-icons/scss2-svgrepo-com.svg"
 
 import linkIcon3 from "../../../assets/link-icon/link-icon-3.svg"
 import githubIcon from "../../../assets/icons8-github.svg"
@@ -41,6 +43,29 @@ const Projects = () => {
 
     const projects = useMemo<ProjectsType[]>(() => 
     [
+
+        {
+            projectImage: clipXImage,
+            projectTitle: "ClipX",
+            projectTechs: [
+                {
+                    techIcon: reactIcon,
+                    techName: "React",
+                },
+                {
+                    techIcon: typescriptIcon,
+                    techName: "Typescript",
+                },
+                {
+                    techIcon: scssIcon,
+                    techName: "SCSS",
+                }
+            ],
+            projectDescription: "A custom YouTube video queue player.",
+            projectLink: "https://nainglutun.github.io/ClipX",
+            githubLink: "https://github.com/NaingLuTun/ClipX",
+            transition: 2,
+        },
         {
             projectImage: boilingPointImage,
             projectTitle: "Boiling Point",
@@ -137,6 +162,7 @@ const Projects = () => {
             githubLink: "https://github.com/NaingLuTun/DevLab",
             transition: 2,
         },
+        
     ],[])
 
     return (

@@ -9,6 +9,7 @@ import tailwindCSSIcon from "../../../assets/tech-stack-icons/tailwind-svgrepo-c
 import gitIcon from "../../../assets/tech-stack-icons/git-icon-svgrepo-com.svg"
 import HTMLIcon from "../../../assets/tech-stack-icons/html-5-svgrepo-com.svg"
 import CSSICon from "../../../assets/tech-stack-icons/css-svgrepo-com.svg" 
+import scssIcon from "../../../assets/tech-stack-icons/scss2-svgrepo-com.svg"
 
 
 interface techStackType {
@@ -48,6 +49,12 @@ const TechStack = () => {
             image: tailwindCSSIcon,
             description: "CSS framework",
             bgColor: "#1dc1cd33",
+        },
+        {
+          name: "SCSS",
+          image: scssIcon,
+          description: "CSS with superpowers",
+          bgColor: "#d1699b33",  
         },
         {
             name: "Git",
@@ -90,6 +97,8 @@ const TechStack = () => {
                 <IndividualTechContainer name={techStacks[5].name} image={techStacks[5].image} description={techStacks[5].description} bgColor={techStacks[5].bgColor}/>
 
                 <IndividualTechContainer name={techStacks[6].name} image={techStacks[6].image} description={techStacks[6].description} bgColor={techStacks[6].bgColor}/>
+
+                <IndividualTechContainer name={techStacks[7].name} image={techStacks[7].image} description={techStacks[7].description} bgColor={techStacks[7].bgColor}/>
             </div>
         </section>
     )
