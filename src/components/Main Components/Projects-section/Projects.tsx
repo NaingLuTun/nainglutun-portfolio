@@ -3,6 +3,7 @@ import geraStoreImage from "../../../assets/projects-images/gera-store-image.png
 import flowyImage from "../../../assets/projects-images/flowy-image.png"
 import devLabImage from "../../../assets/projects-images/devlab-image.png"
 import clipXImage from "../../../assets/projects-images/ClipX-image.png"
+import primegymImage from "../../../assets/projects-images/primegym-image.png"
 
 import javascriptIcon from "../../../assets/tech-stack-icons/javascript-svgrepo-com.svg"
 import typescriptIcon from "../../../assets/tech-stack-icons/typescript-icon-svgrepo-com.svg"
@@ -43,7 +44,28 @@ const Projects = () => {
 
     const projects = useMemo<ProjectsType[]>(() => 
     [
-
+        {
+            projectImage: primegymImage,
+            projectTitle: "PRIMEGYM",
+            projectTechs: [
+                {
+                    techIcon: reactIcon,
+                    techName: "React",
+                },
+                {
+                    techIcon: typescriptIcon,
+                    techName: "Typescript",
+                },
+                {
+                    techIcon: tailwindCSSIcon,
+                    techName: "Tailwind",
+                }
+            ],
+            projectDescription: "Responsive and attractive landing page to showcase the dynamic and energetic vibe of a modern gym.",
+            projectLink: "https://nainglutun.github.io/primegym",
+            githubLink: "https://github.com/NaingLuTun/primegym",
+            transition: 0.5,
+        },
         {
             projectImage: clipXImage,
             projectTitle: "ClipX",
@@ -64,7 +86,7 @@ const Projects = () => {
             projectDescription: "A custom YouTube video queue player.",
             projectLink: "https://nainglutun.github.io/ClipX",
             githubLink: "https://github.com/NaingLuTun/ClipX",
-            transition: 0.5,
+            transition: 1,
         },
         {
             projectImage: boilingPointImage,
@@ -88,7 +110,7 @@ const Projects = () => {
             projectDescription: "A responsive and interactive hot pot restaurant website for hot pot lovers",
             projectLink: "https://nainglutun.github.io/boiling-point",
             githubLink: "https://github.com/NaingLuTun/boiling-point",
-            transition: 1,
+            transition: 1.5,
         },
         {
             projectImage: geraStoreImage,
@@ -112,7 +134,7 @@ const Projects = () => {
             projectDescription: "A complete online e-commerce clothing store website for stylish people",
             projectLink: "https://nainglutun.github.io/gera-store",
             githubLink: "https://github.com/NaingLuTun/gera-store",
-            transition: 1.5,
+            transition: 2,
         },
         {
             projectImage: flowyImage,
@@ -136,7 +158,7 @@ const Projects = () => {
             projectDescription: "A fully functional weather forecast web application, powered by openweathermap API",
             projectLink: "https://nainglutun.github.io/flowy",
             githubLink: "https://github.com/NaingLuTun/flowy",
-            transition: 2,
+            transition: 2.5,
         },
         {
             projectImage: devLabImage,
@@ -160,7 +182,7 @@ const Projects = () => {
             projectDescription: "An attractive, responsive and interactive landing page for an educationl website",
             projectLink: "https://nainglutun.github.io/DevLab",
             githubLink: "https://github.com/NaingLuTun/DevLab",
-            transition: 2.5,
+            transition: 3,
         },
         
     ],[])
