@@ -61,7 +61,7 @@ const Projects = () => {
                     techName: "Tailwind",
                 }
             ],
-            projectDescription: "Responsive and attractive landing page to showcase the dynamic and energetic vibe of a modern gym.",
+            projectDescription: "A complete gym website to showcase the dynamic and energetic vibe of a modern gym.",
             projectLink: "https://nainglutun.github.io/primegym",
             githubLink: "https://github.com/NaingLuTun/primegym",
             transition: 0.5,
