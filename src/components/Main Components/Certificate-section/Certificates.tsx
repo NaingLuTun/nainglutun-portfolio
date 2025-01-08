@@ -68,6 +68,11 @@ const Certificates = () => {
             certiLink: "https://coursera.org/verify/ZKCXS0G14SVJ",
         },
     ],[]) 
+
+    /*  bg-[#252525] certificateContainer 
+        bg-[#252525] mainCertiInfoContainer
+        bg-[#252525] moduleCertificatesContainer
+    */
     return (
         <section id="certificates" className="bg-[#07080a] w-full p-[25px] lg:p-[50px] certificateSection">
             <div className="mb-[25px] md:mb-[50px] text-center certificateHeaderContainer">
@@ -75,7 +80,7 @@ const Certificates = () => {
                 <p className="text-[#c0c0c0] w-full">The Meta Front-End Developer Professional Certificate course gave me a solid foundation in front-end development and enhanced my ability to create responsive and user-friendly websites.</p>
             </div>
             
-            <div className="w-full h-full bg-[#252525] p-4 rounded-xl gap-4 certificateContainer">
+            <div className="w-full h-full  p-4 rounded-xl gap-4 glass certificateContainer">
                 <div className="w-full text-center mb-6 mainCertiImageHeaderDescription">
                     <h2 className="text-white text-xl mainCertificateHeader">Meta Front-End Developer</h2>
                     <h2 className="text-white text-xl  mainCertificateHeaderDescription">Specialization Certificate</h2> 
@@ -105,7 +110,7 @@ const Certificates = () => {
                                 ))}
                                 
                             </div>
-                                <div className="w-full flex flex-col gap-3 p-[14px] bg-[#252525] rounded-xl mainCertiInfoContainer">
+                                <div className="w-full flex flex-col gap-3 p-[14px] rounded-xl glass mainCertiInfoContainer">
                                     <div className="flex items-center gap-1 mb-2 organizationContainer">
                                         <p className="text-white lg:text-lg organization">Organization - </p>
                                         <div className="p-1 flex justify-center items-center bg-white metaIconContainer">
@@ -125,7 +130,7 @@ const Certificates = () => {
                         </div>
                     </div>
 
-                    <div className="p-[14px] bg-[#252525] rounded-xl moduleCertificates">
+                    <div className="p-[14px] rounded-xl glass moduleCertificates">
                         <h2 className="text-white text-xl mb-6 text-center">Course Completed Module Certificates</h2>
 
                         <div className="lg:grid lg:grid-cols-2 moduleCertificatesContainer">

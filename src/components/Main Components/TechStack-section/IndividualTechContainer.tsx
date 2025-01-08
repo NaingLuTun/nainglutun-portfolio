@@ -13,9 +13,10 @@ const IndividualTechContainer = ({name, image, description, bgColor}: individual
         threshold: 0.1,
     })
 
+    /* bg-[#252525] hover:bg-[#2b2b2b] */
 
   return (
-        <div ref={ref} className={`p-[10px] mb-3 rounded-xl flex gap-4 w-full bg-[#252525] hover:bg-[#2b2b2b] hover:shadow-inwards ${inView? "revealTeckStack" : ""} md:mb-0 lg:h-fit individualTechStackContainer`}>
+        <div ref={ref} className={`p-[10px] mb-3 rounded-xl flex gap-4 w-full  hover:shadow-inwards ${inView? "revealTeckStack" : ""} md:mb-0 lg:h-fit glass individualTechStackContainer`}>
             <div style={{backgroundColor: bgColor}} className="w-[80px] h-[80px] p-3 flex justify-center items-center rounded-xl lg:w-[100px] lg:h-fit techIconContainer">
                 <img draggable={false} src={image} alt="react" className="w-full"/>
             </div>

@@ -187,6 +187,8 @@ const Projects = () => {
         
     ],[])
 
+    /* bg-[#252525] individualProjectsContainer */
+
     return (
         <section id="projects" className="bg-[#07080a] w-full p-[25px] lg:p-[50px] projectsSection">
             <div className="mb-[25px] md:mb-[50px] text-center projectsHeaderContainer">
@@ -198,7 +200,7 @@ const Projects = () => {
 
             <div ref={ref} className="grid grid-cols-1 gap-4 lg:grid-cols-2 projectsContainer">
                 {projects.map((project) => (
-                    <div style={{transition: `${project.transition}s`}} key={project.projectTitle} className={`bg-[#252525] p-4 rounded-xl ${inView? "revealProject" : ""} individualProjectsContainer`}>
+                    <div style={{transition: `${project.transition}s`}} key={project.projectTitle} className={` p-4 rounded-xl ${inView? "revealProject" : ""} glass individualProjectsContainer`}>
 
                         
                             <div className="w-full rounded-xl mb-4 relative overflow-hidden projectImageContainer">

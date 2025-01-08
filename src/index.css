@@ -248,4 +248,11 @@
         border-radius: 5px;
     }
 
+    .glass {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+       
+    }
+
 }
